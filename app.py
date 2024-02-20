@@ -46,23 +46,25 @@ def index():
     return "Email address not found."
 
 
-@app.route('/admin', methods=['GET', 'POST'])
-def admin():
+@app.post('/admin/create')
+def post_admin():
     
-    if request.method == 'POST':
-        # Get data from the form
-        email = request.form['email']
-        name = request.form['name']
-        
+    # Get data from the form
+    email = request.form['email']
+    name = request.form['name']
+    
 
-        # Append the new data to the CSV file
-        with open(csv_file, 'a', newline='') as file:
-            writer = csv.writer(file)
-            writer.writerow([email, name, 0, 0])
-        return render_template('form.html')
-
-    # Render the HTML template with the form
+    # Append the new data to the CSV file
+    with open(csv_file, 'a', newline='') as file:
+        writer = csv.writer(file)
+        writer.writerow([email, name, 0, 0])
     return render_template('form.html')
+
+
+@app.route('/admin')
+def admin():
+    return render_template('form.html')
+
 
 @app.route('/admin/download_csv')
 def download_csv():
@@ -71,4 +73,4 @@ def download_csv():
 
 
 if __name__ == '__main__':
-    app.run(debug=True)
+    app.run()
