@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GenPhish</title>
+</head>
+<style>
+    * {
+        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    }
+
+    body{
+        margin:50px;
+    }
+
+    .content {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        text-align: left;
+        height: 80vh;
+        margin-top: 0;
+    }
+
+    .content-text {
+        padding: 30px;
+        border: 3px solid crimson;
+        
+
+    }
+
+    h1, strong {
+        color: crimson;
+    }
+</style>
+<body>
+    <h1>GenPhish</h1>
+    <div class="content">
+        <div class="content-text">
+        <h4>Hi {{ name }},</h4>
+        <p>You've just been phished and as a result, you've been booked for a security awareness training!<br>Thank you.</p>
+        <strong>GenPhish</strong>
+        </div>
+    </div>
+</body>
+</html>
