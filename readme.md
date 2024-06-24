@@ -24,6 +24,7 @@ After the installation, you can use the tool to generate phishing emails. Follow
 
 1. Run the run batch file:
 run.bat
+![genphish](https://github.com/Faluyi/Phish-Gpt/assets/83612442/f2860236-9cee-478f-b8c6-4943f76e688e)
 
 ## Local Configuration
 
