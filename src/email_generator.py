@@ -6,7 +6,7 @@ import logging
 class EmailGenerator:
     def __init__(self):
         # Initialize the OpenAI API client with the provided API key
-        api_key = "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"
+        # api_key = "API-KEY" uncomment and insert the API key
         self.client = OpenAI(api_key=api_key)
 
         print("prompting AI model...")
